@@ -1,0 +1,181 @@
+/*
+ * The flex-y portions of this styling have been adapted from
+ * https://www.bitovi.com/blog/use-flexbox-to-create-a-sticky-header-and-sidebar-with-flexible-content
+ */
+* {
+    font-family: verdana;
+}
+
+body {
+    height: 100%;   
+    margin: 8px;
+}
+
+.caption {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.column {
+    height: 100%;  /*allows both columns to span the full height of the browser window*/
+    display: flex;
+    flex-direction: column;  /*places the left and right headers above the bottom content*/
+    padding: 10px;
+}
+
+.container {
+    overflow: hidden; /*makes the container non-scrollable (we will add scrolling to the menu and main content containers)*/
+    display: flex; /*enables flex content for its children*/
+    padding: 8px;
+}
+
+.copyright {
+    font-style: italic;
+}
+
+/* A simple, elegant divider. */
+.divider {
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.footnote {
+    font-size: 12px;
+}
+
+.header {
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+html {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+#left {
+    flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
+}
+
+#left.column {
+    width: 25%;
+    padding-left: 5px;
+    /*list-style-type: none;*/
+    margin: 0px;
+}
+
+.logo {
+    float: left;
+    margin: 8px;
+}
+
+.menu {
+    margin-top: 5px; /* Ensure the top of the menu doesn't look clipped. */
+}
+
+.menu, .content {
+    flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
+    overflow-y: auto;  /*adds scroll to this container*/
+}
+
+.menu a:hover {
+    background: lightgrey;
+}
+
+.menu a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul {
+    display: block;
+    font-size: 11px;
+    padding-left: 7px;
+    list-style-type: none;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+}
+
+#right.column {
+    width: 60%;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 8px;
+}
+
+td {
+    padding: 5px;
+    vertical-align: top;
+    border-bottom: 1px solid;
+}
+
+/* Making a row clickable requires some JS that I don't believe is
+ * necessary at the moment. Should we decide we want that sort of
+ * functionality, let's uncomment this styling so that it matches
+ * the design of the left-hand menu.
+tr:hover {
+    background-color: lightgrey;
+}
+ */
+
+.title {
+    text-align: left;
+}
+
+ul.footnote, ul.reference {
+    list-style-type: none;
+}
+
+ul.footnote li, ul.reference li {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
