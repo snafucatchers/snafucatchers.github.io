@@ -103,7 +103,6 @@ img {
 
 .menu {
     margin-top: 5px; /* Ensure the top of the menu doesn't look clipped. */
-    font-family: verdana;
 }
 
 .menu, .content {
@@ -130,6 +129,7 @@ img {
     font-size: 11px;
     padding-left: 7px;
     list-style-type: none;
+    font-family: verdana, sans-serif;
 }
 
 p {
