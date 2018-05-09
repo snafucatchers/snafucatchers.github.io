@@ -14,8 +14,8 @@ body {
 .caption {
     font-size: 13px;
     font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -86,6 +86,11 @@ html {
 }
 
 img {
+    max-width: 100%;
+    padding-top: 35px;
+}
+
+imglogo {
     max-width: 100%;
 }
 
