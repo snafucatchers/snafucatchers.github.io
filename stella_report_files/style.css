@@ -2,13 +2,15 @@
  * The flex-y portions of this styling have been adapted from
  * https://www.bitovi.com/blog/use-flexbox-to-create-a-sticky-header-and-sidebar-with-flexible-content
  */
+
 * {
     font-family: verdana;
-}
+}    
 
 body {
     height: 100%;   
     margin: 8px;
+    font-size: 14px;
 }
 
 .caption {
@@ -112,6 +114,7 @@ imglogo {
 
 .menu {
     margin-top: 5px; /* Ensure the top of the menu doesn't look clipped. */
+    font-size: 11px;
 }
 
 .menu, .content {
@@ -166,6 +169,7 @@ td {
     padding: 5px;
     vertical-align: top;
     border-bottom: 1px solid;
+    font-size: 14px;
 }
 
 /* Making a row clickable requires some JS that I don't believe is
